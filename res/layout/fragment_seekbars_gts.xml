@@ -1,0 +1,145 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <!-- Mood -->
+
+    <TextView
+        android:id="@+id/textViewMoodGTS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="40dp"
+        android:text="@string/goingtosleep_mood"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/medium_small_label_color" />
+
+    <TextView
+        android:id="@+id/textViewMoodLabelGTS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewMoodGTS"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/textViewMoodGTS"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <SeekBar
+        android:id="@+id/seekBarMoodGTS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewMoodLabelGTS" />
+
+    <!-- Social quality -->
+
+    <TextView
+        android:id="@+id/textViewQualityGTS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBarMoodGTS"
+        android:layout_alignLeft="@+id/textViewMoodGTS"
+        android:text="@string/goingtosleep_quality"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/medium_small_label_color" />
+
+    <TextView
+        android:id="@+id/textViewSocQualLabelGTS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewQualityGTS"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/textViewQualityGTS"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <SeekBar
+        android:id="@+id/seekBarQualityGTS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewSocQualLabelGTS" />
+
+    <!-- Social quantity -->
+
+    <TextView
+        android:id="@+id/textViewQuantityGTS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBarQualityGTS"
+        android:layout_alignLeft="@+id/textViewMoodGTS"
+        android:text="@string/goingtosleep_quantity"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/medium_small_label_color" />
+
+    <TextView
+        android:id="@+id/textViewSocQuanLabelGTS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewQuantityGTS"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/textViewQuantityGTS"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <SeekBar
+        android:id="@+id/seekBarQuantityGTS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewSocQuanLabelGTS" />
+
+    <!-- Stress -->
+
+    <TextView
+        android:id="@+id/textViewStressWorkGTS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBarQuantityGTS"
+        android:layout_alignLeft="@+id/textViewMoodGTS"
+        android:text="@string/goingtosleep_stress_work"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/medium_small_label_color" />
+
+    <TextView
+        android:id="@+id/textViewStressWorkLabelGTS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewStressWorkGTS"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/textViewStressWorkGTS"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <SeekBar
+        android:id="@+id/seekBarStressWorkGTS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewStressWorkGTS" />
+
+    <TextView
+        android:id="@+id/textViewStressNonWorkGTS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBarStressWorkGTS"
+        android:layout_alignLeft="@+id/textViewMoodGTS"
+        android:text="@string/goingtosleep_stress_nonwork"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/medium_small_label_color" />
+
+    <TextView
+        android:id="@+id/textViewStressNonWorkLabelGTS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewStressNonWorkGTS"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/textViewStressNonWorkGTS"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <SeekBar
+        android:id="@+id/seekBarStressNonWorkGTS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewStressNonWorkGTS"
+        android:layout_marginTop="5dp" />
+
+</RelativeLayout>

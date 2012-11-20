@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/textViewWakingUpSleepQualityWU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/wakingup_sleepquality"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/medium_small_label_color" />
+
+    <TextView
+        android:id="@+id/textViewSleepQualLabelWU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewWakingUpSleepQualityWU"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/textViewWakingUpSleepQualityWU"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <SeekBar
+        android:id="@+id/seekBarWakingUpSleepQualityWU"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewWakingUpSleepQualityWU" />
+
+    <TextView
+        android:id="@+id/textViewWakingUpMoodWU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBarWakingUpSleepQualityWU"
+        android:layout_centerHorizontal="true"
+        android:text="@string/wakingup_mood"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/medium_small_label_color" />
+
+    <TextView
+        android:id="@+id/textViewMoodLabelWU"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewWakingUpMoodWU"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/textViewWakingUpMoodWU"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <SeekBar
+        android:id="@+id/seekBarWakingUpMoodWU"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewWakingUpMoodWU" />
+
+</RelativeLayout>

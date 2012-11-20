@@ -1,0 +1,22 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backgroundcolor"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+    
+    <TextView
+        android:id="@+id/textViewPrepareReqToken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="42dp"
+        android:text="@string/prepareReqToken"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/large_label_color" />
+    
+    
+</RelativeLayout>

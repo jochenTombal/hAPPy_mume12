@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backgroundcolor" >
+
+    <TextView
+        android:id="@+id/textViewSetReminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/textview_reminder"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/large_label_color" />
+
+    <TimePicker
+        android:id="@+id/timePickerSetReminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewSetReminder"
+        android:layout_centerHorizontal="true" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSetReminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timePickerSetReminder"
+        android:layout_centerHorizontal="true"
+        android:text="@string/checkbox_reminder"
+        android:textColor="@color/large_label_color" />
+
+    <CheckBox
+        android:id="@+id/checkBoxVibrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/checkBoxSetReminder"
+        android:text="@string/checkbox_vibrate"
+        android:textColor="@color/large_label_color" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/checkBoxSetReminder"
+        android:text="@string/checkbox_sound"
+        android:textColor="@color/large_label_color" />
+
+</RelativeLayout>

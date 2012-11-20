@@ -1,0 +1,42 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backgroundcolor" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <fragment
+            android:id="@+id/fragment_seekbars_wu"
+            android:name="com.mume12.happy.fragments.SeekBarFragmentWU"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+        </fragment>
+
+        <CheckBox
+            android:id="@+id/checkBoxEnoughSleepWU"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fragment_seekbars_wu"
+            android:layout_centerHorizontal="true"
+            android:text="@string/wakingup_enoughsleep"
+            android:textColor="@color/large_label_color" />
+
+        <Button
+            android:id="@+id/buttonWakingUpWU"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkBoxEnoughSleepWU"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/my_selector"
+            android:onClick="wakingUpSubmitResults"
+            android:text="@string/wakingup_wakeupbutton"
+            android:textColor="@color/text_color" />
+    </RelativeLayout>
+
+</ScrollView>

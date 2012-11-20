@@ -1,0 +1,133 @@
+<resources>
+
+    <!-- Colors -->
+    <color name="medium_small_label_color">#35586C</color>
+    <color name="large_label_color">#00688B</color>
+    <color name="text_color">#FFFFFF</color>
+    <color name="backgroundcolor">#B0E0E6</color>
+
+    <string name="app_name">hAPPy</string>
+    <string name="title_activity_home_screen">hAPPy</string>
+    <string name="reminder_notification">Reminder hAPPy</string>
+
+    <!-- homescreen strings -->
+    <string name="homescreen_sleep">Going to sleep?</string>
+    <string name="homescreen_wakeup">Waking up?</string>
+    <string name="homescreen_results">Get the results!</string>
+    <string name="homescreen_settings">Settings</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_going_to_sleep">GoingToSleepActivity</string>
+    <string name="title_activity_waking_up">WakingUpActivity</string>
+
+    <!-- going to sleep screen strings -->
+    <string name="goingtosleep_mood">Your mood today: </string>
+    <string name="goingtosleep_social">Social contact?</string>
+    <string name="goingtosleep_quality">Social quality: </string>
+    <string name="goingtosleep_quantity">Social quantity: </string>
+    <string name="goingtosleep_stress">How stressful was your day?</string>
+    <string name="goingtosleep_stress_work">Work-related stress: </string>
+    <string name="goingtosleep_stress_nonwork">Non-work related stress: </string>
+    <string name="goingtosleep_recreational">Recreational time</string>
+    <string name="goingtosleep_enough">Enough?</string>
+    <string name="goingtosleep_hours"># Hours?</string>
+    <string name="goingtosleep_alcohol_caffeine">Alcohol/caffeine last 3 hours?</string>
+    <string name="goingtosleep_caffeine">Caffeine</string>
+    <string name="goingtosleep_alcohol">Alcohol</string>
+    <string name="goingtosleep_good">Good</string>
+    <string name="goingtosleep_bad">Bad</string>
+    <string name="goingtosleep_sleeptight">Good night!</string>
+    <string name="goingtosleep_twitter">Tweet!</string>
+    <string name="title_activity_ask_wake_up">AskWakeUpActivity</string>
+
+    <!-- ask wake up screen strings -->
+    <string name="askwakeup_askwakeup">Do you want to get out of bed?</string>
+    <string name="askwakeup_yes">Yes!</string>
+    <string name="askwakeup_no">No!</string>
+
+    <!-- waking up screen strings -->
+    <string name="wakingup_sleepquality">How well did you sleep: </string>
+    <string name="wakingup_mood">Your mood: </string>
+    <string name="wakingup_enoughsleep">Got enough sleep?</string>
+    <string name="wakingup_wakeupbutton">Good morning!</string>
+
+    <!-- settings screen strings -->
+    <string name="settings_accelero">Accelerometer settings</string>
+    <string name="settings_reminder">Set a reminder</string>
+
+    <!-- AcceleroMeterSettings screen strings -->
+    <string name="accsettings_useaccelero">Use accelero at wake-up?</string>
+    <string name="accsettings_acceleroSensitivity">Adjust sensitivity</string>
+    <string name="accsettings_savebutton">Save accelerometer settings</string>
+    <string name="accsettings_moreSensitive">More sensitive</string>
+    <string name="accsettings_lessSensitive">Less sensitive</string>
+    <string name="accsettings_saveUseAccBool">useAccBoolean</string>
+    <string name="accsettings_saveAccSensitivityInt">accSensitivityInt</string>
+
+    <!-- ReminderSettingsActivity screen -->
+    <string name="textview_reminder">Set reminder time</string>
+    <string name="checkbox_reminder">Set reminder?</string>
+    <string name="checkbox_sound">Play sound?</string>
+    <string name="checkbox_vibrate">Vibrate phone?</string>
+    <string name="reminder_saveSetReminder">setReminder</string>
+    <string name="reminder_saveSetReminderSound">setReminderPlaySound</string>
+    <string name="reminder_saveSetReminderVibrate">setReminderVibrate</string>
+    <string name="reminder_saveSetReminderTimeMin">setReminderTimeMin</string>
+    <string name="reminder_saveSetReminderTimeHour">setReminderTimeHour</string>
+
+    <!-- persistent storage of settings strings -->
+    <string name="settingFileName">storeSettings</string>
+
+    <!-- persistent storage of parameters (user sleeping or not) strings -->
+    <string name="parametersFileName">storeParameters</string>
+    <string name="parameters_userSleeping">userSleeping</string>
+
+    <!-- Database name -->
+    <string name="DatabaseName">sleepdb</string>
+    <string name="title_activity_adjust_settings">AdjustSettingsActivity</string>
+    <string name="title_activity_accelero_settings">AcceleroSettingsActivity</string>
+    <string name="title_activity_show_results">ShowResultsActivity</string>
+    <string name="title_activity_location">LocationActivity</string>
+    <string name="get_location">Get my location!</string>
+    <string name="showmaps">Show location in Maps!</string>
+    <string name="title_activity_pie_chart_demo01">PieChartDemo01Activity</string>
+    <string name="title_activity_average_sleep_view">AverageSleepViewActivity</string>
+    <string name="title_activity_show_time_results">ShowTimeResultsActivity</string>
+
+    <!-- different result strings -->
+    <string name="show_time_results">Time Statistics</string>
+    <string name="show_emotion_results">Emotion Statistics</string>
+    <string name="title_activity_show_emotion_results">ShowEmotionResultsActivity</string>
+    <string name="title_activity_reminder_settings">ReminderSettingsActivity</string>
+
+    <!-- SeekBar labels -->
+    <string name="seekbarQual0">Horrible</string>
+    <string name="seekbarQual1">Bad</string>
+    <string name="seekbarQual2">Average</string>
+    <string name="seekbarQual3">Good</string>
+    <string name="seekbarQual4">Excellent</string>
+    <string name="seekbarQuan0">None</string>
+    <string name="seekbarQuan1">Not much</string>
+    <string name="seekbarQuan2">Average</string>
+    <string name="seekbarQuan3">A little</string>
+    <string name="seekbarQuan4">A lot</string>
+    <string name="seekbarLabelInitValue">Average</string>
+
+    <!--  -->
+    <string name="title_activity_waking_up_tabs">WakingUpTabsActivity</string>
+    <string name="title_activity_twitter">TwitterActivity</string>
+    <string name="twitter_tags">#mume12</string>
+    <string name="twitter_tweet">Tweet</string>
+    <string name="twitter_title">Tweet something</string>
+    <string name="twitter_clearcred">Clear credentials</string>
+    <string name="title_activity_prepare_request_token">PrepareRequestTokenActivity</string>
+    <string name="title_activity_show_auth_page_twitter">ShowAuthPageTwitterActivity</string>
+    <string name="prepareReqToken">Starting authentication</string>
+    <string name="title_activity_settings_preference">SettingsPreferenceActivity</string>
+    <string name="title_activity_going_to_sleep_fragment">GoingToSleepFragmentActivity</string>
+    <string name="title_activity_line_chart">LineChartActivity</string>
+    <string name="title_activity_mood_pie">MoodPieActivity</string>
+    <string name="title_activity_waking_up_fragment">WakingUpFragmentActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_mood_variations">MoodVariationsActivity</string>
+
+</resources>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backgroundcolor" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true" >
+
+        <EditText
+            android:id="@+id/editTextTweet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="67dp"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:maxLength="140" />
+
+        <TextView
+            android:id="@+id/textViewTwitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/twitter_title"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/large_label_color" />
+
+        <Button
+            android:id="@+id/btn_tweet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextTweet"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="98dp"
+            android:background="@drawable/my_selector"
+            android:onClick="tweetMessage"
+            android:text="@string/twitter_tweet"
+            android:textColor="@color/text_color" />
+
+        <Button
+            android:id="@+id/btn_clear_credentials"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/btn_tweet"
+            android:layout_below="@+id/btn_tweet"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/my_selector"
+            android:onClick="clearCredentials"
+            android:text="@string/twitter_clearcred"
+            android:textColor="@color/text_color" />
+
+        <TextView
+            android:id="@+id/textViewCharCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/editTextTweet"
+            android:text=""
+            android:textColor="@color/text_color" />
+    </RelativeLayout>
+
+</ScrollView>

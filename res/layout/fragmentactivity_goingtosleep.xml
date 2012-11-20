@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/backgroundcolor" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true" >
+
+        <fragment
+            android:id="@+id/fragment_seekbar"
+            android:name="com.mume12.happy.fragments.SeekBarFragmentGTS"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+        </fragment>
+
+        <TextView
+            android:id="@+id/textViewRecreationalGTS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fragment_seekbar"
+            android:layout_centerHorizontal="true"
+            android:text="@string/goingtosleep_recreational"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/medium_small_label_color" />
+
+        <TextView
+            android:id="@+id/textViewAlcoholCaffeineGTS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewRecreationalGTS"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="42dp"
+            android:text="@string/goingtosleep_alcohol_caffeine"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/medium_small_label_color" />
+
+        <CheckBox
+            android:id="@+id/checkBoxCaffeineGTS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/textViewAlcoholCaffeineGTS"
+            android:text="@string/goingtosleep_caffeine"
+            android:textColor="@color/medium_small_label_color" />
+
+        <CheckBox
+            android:id="@+id/checkBoxAlcoholGTS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/checkBoxCaffeineGTS"
+            android:layout_alignBottom="@+id/checkBoxCaffeineGTS"
+            android:layout_alignParentLeft="true"
+            android:text="@string/goingtosleep_alcohol"
+            android:textColor="@color/medium_small_label_color" />
+
+        <CheckBox
+            android:id="@+id/checkBoxEnoughRecGTS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/textViewRecreationalGTS"
+            android:text="@string/goingtosleep_enough"
+            android:textColor="@color/medium_small_label_color" />
+
+        <EditText
+            android:id="@+id/editTextRecreationalTimeGTS"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textViewRecreationalGTS"
+            android:ems="10"
+            android:inputType="number" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/textViewHoursGTS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/editTextRecreationalTimeGTS"
+            android:layout_alignBottom="@+id/editTextRecreationalTimeGTS"
+            android:layout_toRightOf="@+id/editTextRecreationalTimeGTS"
+            android:text="@string/goingtosleep_hours"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/medium_small_label_color" />
+
+        <Button
+            android:id="@+id/buttonSleepTight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkBoxAlcoholGTS"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/my_selector"
+            android:onClick="GoingToSleep"
+            android:text="@string/goingtosleep_sleeptight"
+            android:textColor="@color/text_color" />
+    </RelativeLayout>
+
+</ScrollView>
