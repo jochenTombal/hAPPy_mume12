@@ -75,8 +75,7 @@
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/textViewRecreationalGTS"
             android:ems="10"
-            android:inputType="number" >
-        </EditText>
+            android:inputType="numberDecimal"></EditText>
 
         <TextView
             android:id="@+id/textViewHoursGTS"

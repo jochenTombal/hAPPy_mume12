@@ -96,7 +96,7 @@ public class EmotionStorageHandler extends DatabaseHandler {
 		int soc_quan = cursor.getInt(3);
 		int stresswork = cursor.getInt(4);
 		int stressnonwork = cursor.getInt(5);
-		double rec_hours = cursor.getInt(6);
+		double rec_hours = cursor.getDouble(6);
 
 		boolean enough_rec = true;
 		if (cursor.getInt(7) == 0) {
@@ -170,7 +170,7 @@ public class EmotionStorageHandler extends DatabaseHandler {
 				int soc_quan = cursor.getInt(3);
 				int stresswork = cursor.getInt(4);
 				int stressnonwork = cursor.getInt(5);
-				double rec_hours = cursor.getInt(6);
+				double rec_hours = cursor.getDouble(6);
 
 				int wake_up_mood = cursor.getInt(10);
 				int sleep_quality = cursor.getInt(11);
@@ -335,8 +335,8 @@ public class EmotionStorageHandler extends DatabaseHandler {
 		return stressNonWork;
 	}
 	
-	public List<Integer> getRecHours() {
-		List<Integer> recHours = new ArrayList<Integer>();
+	public List<Double> getRecHours() {
+		List<Double> recHours = new ArrayList<Double>();
 		
 		String selectQuery = "SELECT " + RECREATIONAL_HOURS + " FROM "
 				+ TABLE_EMOTION_PARAMETERS;
@@ -347,7 +347,7 @@ public class EmotionStorageHandler extends DatabaseHandler {
 
 		if (cursor.moveToFirst()) {
 			do {
-				recHours.add(cursor.getInt(0));
+				recHours.add(cursor.getDouble(0));
 			} while (cursor.moveToNext());
 		}
 		
