@@ -96,7 +96,7 @@ public class EmotionStorageHandler extends DatabaseHandler {
 		int soc_quan = cursor.getInt(3);
 		int stresswork = cursor.getInt(4);
 		int stressnonwork = cursor.getInt(5);
-		int rec_hours = cursor.getInt(6);
+		double rec_hours = cursor.getInt(6);
 
 		boolean enough_rec = true;
 		if (cursor.getInt(7) == 0) {
@@ -170,7 +170,7 @@ public class EmotionStorageHandler extends DatabaseHandler {
 				int soc_quan = cursor.getInt(3);
 				int stresswork = cursor.getInt(4);
 				int stressnonwork = cursor.getInt(5);
-				int rec_hours = cursor.getInt(6);
+				double rec_hours = cursor.getInt(6);
 
 				int wake_up_mood = cursor.getInt(10);
 				int sleep_quality = cursor.getInt(11);

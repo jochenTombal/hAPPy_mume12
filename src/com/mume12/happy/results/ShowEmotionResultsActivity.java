@@ -49,7 +49,7 @@ public class ShowEmotionResultsActivity extends ListActivity {
 			int con_quan = em.get_soc_contact_quantity();
 			int stressWork = em.get_stress_work();
 			int stressNonWork = em.get_stress_non_work();
-			int rec_hours = em.get_rec_hours();
+			double rec_hours = em.get_rec_hours();
 			int enough_rec = em.get_rec_enough();
 			
 			int alcohol = em.get_alcohol();
@@ -96,7 +96,7 @@ public class ShowEmotionResultsActivity extends ListActivity {
 		int con_quan = em.get_soc_contact_quantity();
 		int stressWork = em.get_stress_work();
 		int stressNonWork = em.get_stress_non_work();
-		int rec_hours = em.get_rec_hours();
+		double rec_hours = em.get_rec_hours();
 		int enough_rec = em.get_rec_enough();
 		
 		int alcohol = em.get_alcohol();

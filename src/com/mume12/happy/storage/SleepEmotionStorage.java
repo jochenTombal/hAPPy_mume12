@@ -13,7 +13,7 @@ public class SleepEmotionStorage extends EmotionStorage {
 
 	public SleepEmotionStorage(int _mood_sleep,
 			int _soc_contact_quality, int soc_contact_quantity, int _stressWork, int _stressNonWork,
-			int _rec_hours, boolean _rec_enough, boolean _alcohol, boolean _caffeine) {
+			double _rec_hours, boolean _rec_enough, boolean _alcohol, boolean _caffeine) {
 		this.mood_sleep = _mood_sleep;
 		this.soc_contact_quality = _soc_contact_quality;
 		this.soc_contact_quantity = soc_contact_quantity;

@@ -132,12 +132,12 @@ public class GoingToSleepFragmentActivity extends FragmentActivity {
 		return sleepSt;
 	}
 
-	protected int getRecHours() {
+	protected double getRecHours() {
 		EditText nr_rec_hours = (EditText) findViewById(R.id.editTextRecreationalTimeGTS);
 		String rec_hours_value = nr_rec_hours.getText().toString();
 
 		if(rec_hours_value.equals("") == false){
-			return Integer.parseInt(rec_hours_value);
+			return Double.parseDouble(rec_hours_value);
 		} else{
 			return 0;
 		}
@@ -154,16 +154,16 @@ public class GoingToSleepFragmentActivity extends FragmentActivity {
 		// Number of recreational hours
 		EditText nr_rec_hours = (EditText) findViewById(R.id.editTextRecreationalTimeGTS);
 		String rec_hours_value = nr_rec_hours.getText().toString();
-		int rec_hours = 0;
+		double rec_hours = 0;
 		if(rec_hours_value.equals("") == false){
-			rec_hours = Integer.parseInt(rec_hours_value);
+			rec_hours = Double.parseDouble(rec_hours_value);
 		}
 
 		// Alcohol checkbox
 		CheckBox checkBoxAlcohol = (CheckBox) findViewById(R.id.checkBoxAlcoholGTS);
 		boolean alcohol = checkBoxAlcohol.isChecked();
 
-		// Caffeine checkbox
+		// Caffeine checkboxrec
 		CheckBox checkBoxCaffeine = (CheckBox) findViewById(R.id.checkBoxCaffeineGTS);
 		boolean caffeine = checkBoxCaffeine.isChecked();
 
