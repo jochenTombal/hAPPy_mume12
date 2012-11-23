@@ -94,6 +94,7 @@
     <string name="title_activity_show_time_results">ShowTimeResultsActivity</string>
 
     <!-- different result strings -->
+    <string name="show_calendar_results">Calendar</string>
     <string name="show_time_results">Time Statistics</string>
     <string name="show_emotion_results">Emotion Statistics</string>
     <string name="title_activity_show_emotion_results">ShowEmotionResultsActivity</string>
@@ -111,6 +112,13 @@
     <string name="seekbarQuan3">A little</string>
     <string name="seekbarQuan4">A lot</string>
     <string name="seekbarLabelInitValue">Average</string>
+    
+    <!-- Calendar -->
+    <string name="calendarToJournalButton"></string>
+    <string name="prevMonth"></string>
+    <string name="nextMonth"></string>
+    <string name="calendarheader"></string>
+    
 
     <!--  -->
     <string name="title_activity_waking_up_tabs">WakingUpTabsActivity</string>
@@ -129,5 +137,7 @@
     <string name="title_activity_waking_up_fragment">WakingUpFragmentActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_mood_variations">MoodVariationsActivity</string>
+    <string name="title_activity_calendar_view">CalendarViewActivity</string>
+    
 
 </resources>

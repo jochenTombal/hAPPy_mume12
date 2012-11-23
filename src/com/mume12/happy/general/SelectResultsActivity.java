@@ -7,6 +7,7 @@ import com.mume12.happy.R;
 import com.mume12.happy.charts.MoodPieGTS;
 import com.mume12.happy.charts.MoodPieWU;
 import com.mume12.happy.charts.MoodVariationsActivity;
+import com.mume12.happy.results.CalendarViewActivity;
 import com.mume12.happy.results.ShowEmotionResultsActivity;
 import com.mume12.happy.results.ShowTimeResultsActivity;
 import android.os.Bundle;
@@ -32,6 +33,7 @@ public class SelectResultsActivity extends ListActivity {
 		setContentView(R.layout.activity_listview);
 
 		// All options
+		items.add(getString(R.string.show_calendar_results));
 		items.add(getString(R.string.show_time_results));
 		items.add(getString(R.string.show_emotion_results));
 		items.add("Going to sleep MoodPie");
@@ -56,20 +58,24 @@ public class SelectResultsActivity extends ListActivity {
 		String pen = o.toString();
 
 		if (pen.equals(items.get(0))) {
+			// Start calendar results
+			Intent intent = new Intent(this, CalendarViewActivity.class);
+			startActivity(intent);
+		} else if (pen.equals(items.get(1))) {
 			// Start time results
 			Intent intent = new Intent(this, ShowTimeResultsActivity.class);
 			startActivity(intent);
-		} else if (pen.equals(items.get(1))) {
+		} else if (pen.equals(items.get(2))) {
 			// Start emotion results
 			Intent intent = new Intent(this, ShowEmotionResultsActivity.class);
 			startActivity(intent);
-		} else if (pen.equals(items.get(2))) {
+		} else if (pen.equals(items.get(3))) {
 			Intent pieChartIntent = new MoodPieGTS().execute(this);
 			startActivity(pieChartIntent);
-		} else if (pen.equals(items.get(3))) {
+		} else if (pen.equals(items.get(4))) {
 			Intent pieChartIntent = new MoodPieWU().execute(this);
 			startActivity(pieChartIntent);
-		} else if (pen.equals(items.get(4))) {
+		} else if (pen.equals(items.get(5))) {
 			// Intent barChartIntent = new MoodBars().execute(this);
 			Intent barChartIntent = new Intent(this,
 					MoodVariationsActivity.class);

@@ -184,6 +184,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mume12.happy.general.SelectResultsActivity" />
         </activity>
+        <activity
+            android:name=".CalendarViewActivity"
+            android:label="@string/title_activity_calendar_view" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mume12.happy.general.SelectResultsActivity" />
+        </activity>
     </application>
 
 </manifest>
