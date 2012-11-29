@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.mume12.happy.R;
+import com.mume12.happy.calendar.CalendarActivity;
 import com.mume12.happy.charts.MoodPieGTS;
 import com.mume12.happy.charts.MoodPieWU;
 import com.mume12.happy.charts.MoodVariationsActivity;
@@ -37,6 +38,7 @@ public class SelectResultsActivity extends ListActivity {
 		items.add("Going to sleep MoodPie");
 		items.add("Waking up MoodPie");
 		items.add("Mood variations");
+		items.add(getString(R.string.calendar_name));
 
 		// Show different result options
 		showListItems();
@@ -74,6 +76,8 @@ public class SelectResultsActivity extends ListActivity {
 			Intent barChartIntent = new Intent(this,
 					MoodVariationsActivity.class);
 			startActivity(barChartIntent);
+		}else if (pen.equals(items.get(5))){
+			startActivityForResult(new Intent(Intent.ACTION_PICK).setDataAndType(null, CalendarActivity.MIME_TYPE), 100);
 		} else {
 			Log.i("WRONG_LISTITEM", "unknown listitem clicked");
 		}
