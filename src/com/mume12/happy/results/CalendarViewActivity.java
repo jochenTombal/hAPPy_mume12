@@ -21,6 +21,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.BaseAdapter;
 import android.widget.Button;
@@ -30,9 +31,9 @@ import android.widget.TextView;
 
 public class CalendarViewActivity extends Activity implements OnClickListener
 	{
+		//tag = .results.CalendarViewActivity ?
 		private static final String tag = "CalendarViewActivity";
 
-		@SuppressWarnings("unused")
 		private ImageView calendarToJournalButton;
 		private Button selectedDayMonthYearButton;
 		private Button currentMonth;
@@ -42,15 +43,16 @@ public class CalendarViewActivity extends Activity implements OnClickListener
 		private GridCellAdapter adapter;
 		private Calendar _calendar;
 		private int month, year;
-		@SuppressWarnings("unused")
 		private final DateFormat dateFormatter = new DateFormat();
 		private static final String dateTemplate = "MMMM yyyy";
 
 		/** Called when the activity is first created. */
 		
+		@Override
 		public void onCreate(Bundle savedInstanceState)
 			{
 				super.onCreate(savedInstanceState);
+				requestWindowFeature(Window.FEATURE_NO_TITLE);
 				setContentView(R.layout.activity_calendar_view);
 
 				_calendar = Calendar.getInstance(Locale.getDefault());
@@ -145,15 +147,12 @@ public class CalendarViewActivity extends Activity implements OnClickListener
 				private final String[] weekdays = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
 				private final String[] months = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
 				private final int[] daysOfMonth = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-				@SuppressWarnings("unused")
 				private final int month, year;
-				@SuppressWarnings("unused")
 				private int daysInMonth, prevMonthDays;
 				private int currentDayOfMonth;
 				private int currentWeekDay;
 				private Button gridcell;
 				private TextView num_events_per_day;
-				@SuppressWarnings("rawtypes")
 				private final HashMap eventsPerMonthMap;
 				private final SimpleDateFormat dateFormatter = new SimpleDateFormat("dd-MMM-yyyy");
 
@@ -218,7 +217,6 @@ public class CalendarViewActivity extends Activity implements OnClickListener
 						// The number of days to leave blank at
 						// the start of this month.
 						int trailingSpaces = 0;
-						@SuppressWarnings("unused")
 						int leadSpaces = 0;
 						int daysInPrevMonth = 0;
 						int prevMonth = 0;
@@ -318,7 +316,6 @@ public class CalendarViewActivity extends Activity implements OnClickListener
 				 * @param month
 				 * @return
 				 */
-				@SuppressWarnings("rawtypes")
 				private HashMap findNumberOfEventsPerMonth(int year, int month)
 					{
 						HashMap map = new HashMap<String, Integer>();

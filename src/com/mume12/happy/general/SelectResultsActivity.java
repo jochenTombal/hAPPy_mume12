@@ -12,6 +12,7 @@ import com.mume12.happy.results.ShowEmotionResultsActivity;
 import com.mume12.happy.results.ShowTimeResultsActivity;
 import android.os.Bundle;
 import android.app.ListActivity;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.util.Log;
 import android.view.View;
@@ -58,9 +59,14 @@ public class SelectResultsActivity extends ListActivity {
 		String pen = o.toString();
 
 		if (pen.equals(items.get(0))) {
+			try{
 			// Start calendar results
-			Intent intent = new Intent(this, CalendarViewActivity.class);
+			Intent intent = new Intent(this, com.mume12.happy.results.CalendarViewActivity.class);
+			//Intent intent = new Intent(this, com.mume12.happy.results.CalendarViewActivity.GridCellAdapter.class);
 			startActivity(intent);
+			} catch ( ActivityNotFoundException e) {
+			    e.printStackTrace();
+			}
 		} else if (pen.equals(items.get(1))) {
 			// Start time results
 			Intent intent = new Intent(this, ShowTimeResultsActivity.class);
