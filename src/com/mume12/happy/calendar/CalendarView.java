@@ -270,6 +270,11 @@ public class CalendarView extends ImageView {
 	        
 	        // show result
 	        SimpleDateFormat format = new SimpleDateFormat("yyyy MMM dd");
+	        
+	        
+	        
+	        
+	        format.format(dat.getTime());
 	        Toast.makeText(getContext(), text, Toast.LENGTH_LONG).show();
 	        Toast.makeText(, format.format(dat.getTime()), Toast.LENGTH_LONG).show();
 	        
