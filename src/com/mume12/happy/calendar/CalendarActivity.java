@@ -1,31 +1,27 @@
-/*
- * Copyright (C) 2011 Chris Gao <chris@exina.net>
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 
 package com.mume12.happy.calendar;
 
-import com.mume12.happy.R;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.format.DateUtils;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.mume12.happy.R;
+import com.mume12.happy.handlers.TimeCalculations;
+import com.mume12.happy.storage.TimeStorage;
+import com.mume12.happy.storage.TimeStorageHandler;
 
 public class CalendarActivity extends Activity  implements CalendarView.OnCellTouchListener{
 	public static final String MIME_TYPE = "vnd.android.cursor.dir/vnd.exina.android.calendar.date";
@@ -77,6 +73,70 @@ public class CalendarActivity extends Activity  implements CalendarView.OnCellTo
 					}
 				}
 			}
+			//TODO data uithalen en weergeven
+			
+			final Calendar dat = Calendar.getInstance();
+	        dat.set(Calendar.YEAR, year);
+	        dat.set(Calendar.MONTH, month);
+	        dat.set(Calendar.DAY_OF_MONTH, day);
+	        
+			List<String> listItems = new ArrayList<String>();
+
+			TimeStorageHandler tsHandler = TimeStorageHandler.getInstance(this);
+			List<TimeStorage> timeStorageList = new ArrayList<TimeStorage>();
+			
+			timeStorageList = tsHandler.getAllTimeStorage();
+			for (TimeStorage sl : timeStorageList) {
+				
+				if(sl.getStartDate() == dat.getTimeInMillis()){
+					int id = sl.getId();
+
+					// Get start and enddate (both milliseconds)
+					long startDate = sl.getStartDate();
+					long endDate = sl.getEndDate();
+
+					// Convert milliseconds to Date and store as string
+					Date begin = new Date(startDate);
+					String begindate = begin.toLocaleString();
+
+					Date end = new Date(endDate);
+					String enddate = end.toLocaleString();
+
+					// Calculate difference
+					String difftime = TimeCalculations.timeDifference(sl);
+
+					String showInList = "ID item: " + (Integer.toString(id)) + "\n"
+							+ "Went to bed: " + begindate + "\n" + "Got out of bed: "
+							+ enddate + "\n" + "Slept: " + difftime;
+					
+					listItems.add(showInList);
+					
+				}
+				
+				long averageSleep = TimeCalculations.averageSleep(timeStorageList);
+
+				String averageSleepString = "Average time in bed: "
+						+ TimeCalculations.convertMillis(averageSleep);
+
+				listItems.add(averageSleepString);
+				
+				final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+				
+				String message;
+				
+			    StringBuilder sb = new StringBuilder();
+
+				for (int i = 0; i < listItems.size(); i++) {
+		            sb.append( listItems.get(i) );
+		           
+				}
+				
+	            sb.append( averageSleepString );
+				message = sb.toString();
+				builder.setMessage(message).setNegativeButton("Close", null).show();
+				
+			}
+
 			
 			Intent ret = new Intent();
 			ret.putExtra("year", year);
@@ -99,7 +159,29 @@ public class CalendarActivity extends Activity  implements CalendarView.OnCellTo
 				Toast.makeText(CalendarActivity.this, DateUtils.getMonthString(mView.getMonth(), DateUtils.LENGTH_LONG) + " "+mView.getYear(), Toast.LENGTH_SHORT).show();
 			}
 		});
-	}
+		
+		
+		
+		}
+		
+		
+		//final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		//builder.setMessage(pen).setNegativeButton("Close", null).show();
+		
+//		final AlertDialog.Builder builder = new AlertDialog.Builder(
+//				v.getContext());
+//		builder.setMessage(pen).setNegativeButton("Close", null).show();
+		
+	//}
+	
+//	public boolean onTouchEvent (MotionEvent event){
+//		Toast toast = Toast.makeText(CalendarActivity.this, "pick a date", Toast.LENGTH_SHORT);
+//		toast.setDuration(3);
+//		toast.show();
+//		return true;
+//	}
+	
+	
 
     
 }

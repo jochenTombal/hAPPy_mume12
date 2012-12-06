@@ -1,18 +1,3 @@
-/*
- * Copyright (C) 2011 Chris Gao <chris@exina.net>
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 
 package com.mume12.happy.calendar;
 
@@ -256,30 +241,6 @@ public class CalendarView extends ImageView {
 	}
 	
 	
-	public void onActivityResult(int requestCode, int resultCode, Intent data) {
-	    
-	        int year = data.getIntExtra("year", 0);   // get number of year
-	        int month = data.getIntExtra("month", 0); // get number of month 0..11
-	        int day = data.getIntExtra("day", 0);     // get number of day 0..31
-
-	        // format date and display on screen
-	        final Calendar dat = Calendar.getInstance();
-	        dat.set(Calendar.YEAR, year);
-	        dat.set(Calendar.MONTH, month);
-	        dat.set(Calendar.DAY_OF_MONTH, day);
-	        
-	        // show result
-	        SimpleDateFormat format = new SimpleDateFormat("yyyy MMM dd");
-	        
-	        
-	        
-	        
-	        format.format(dat.getTime());
-	        Toast.makeText(getContext(), text, Toast.LENGTH_LONG).show();
-	        Toast.makeText(, format.format(dat.getTime()), Toast.LENGTH_LONG).show();
-	        
-	        
-	              
-	}
+	
 
 }

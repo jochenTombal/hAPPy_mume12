@@ -1,6 +1,8 @@
 package com.mume12.happy.general;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import com.mume12.happy.R;
@@ -18,6 +20,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class SelectResultsActivity extends ListActivity {
 
@@ -77,9 +80,31 @@ public class SelectResultsActivity extends ListActivity {
 					MoodVariationsActivity.class);
 			startActivity(barChartIntent);
 		}else if (pen.equals(items.get(5))){
-			startActivityForResult(new Intent(Intent.ACTION_PICK).setDataAndType(null, CalendarActivity.MIME_TYPE), 100);
+			startActivity(new Intent(Intent.ACTION_VIEW).setDataAndType(null, CalendarActivity.MIME_TYPE));
 		} else {
 			Log.i("WRONG_LISTITEM", "unknown listitem clicked");
 		}
 	}
+	
+//	@Override
+//	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+//	    if(resultCode==RESULT_OK) {
+//	        int year = data.getIntExtra("year", 0);   // get number of year
+//	        int month = data.getIntExtra("month", 0); // get number of month 0..11
+//	        int day = data.getIntExtra("day", 0);     // get number of day 0..31
+//
+//	        // format date and display on screen
+//	        final Calendar dat = Calendar.getInstance();
+//	        dat.set(Calendar.YEAR, year);
+//	        dat.set(Calendar.MONTH, month);
+//	        dat.set(Calendar.DAY_OF_MONTH, day);
+//	        
+//	        // show result
+//	        SimpleDateFormat format = new SimpleDateFormat("yyyy MMM dd");
+//	        Toast.makeText(SelectResultsActivity.this, format.format(dat.getTime()), Toast.LENGTH_LONG).show();
+//	        Intent intent = new Intent(this, ShowTimeResultsActivity.class);
+//	        
+//	                
+//	    }
+//	}
 }

@@ -1,8 +1,6 @@
 package com.mume12.happy.results;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -28,11 +26,12 @@ public class ShowTimeResultsActivity extends ListActivity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_listview);
-		showListItems(Calendar dat);
+
+		showListItems();
 	}
 
 	// Show date and time
-	public void showListItems(Calendar dat) {
+	public void showListItems() {
 		List<String> listItems = new ArrayList<String>();
 
 		TimeStorageHandler tsHandler = TimeStorageHandler.getInstance(this);
@@ -46,11 +45,15 @@ public class ShowTimeResultsActivity extends ListActivity {
 		for (TimeStorage sl : timeStorageList) {
 			int id = sl.getId();
 
+			// Get start and enddate (both milliseconds)
+			long startDate = sl.getStartDate();
+			long endDate = sl.getEndDate();
+
 			// Convert milliseconds to Date and store as string
-			String begindate = dat.getTime().toLocaleString();
-			
-			Date end = dat.getTime();
-			end.setDate(dat.getTime().getDate()+1);
+			Date begin = new Date(startDate);
+			String begindate = begin.toLocaleString();
+
+			Date end = new Date(endDate);
 			String enddate = end.toLocaleString();
 
 			// Calculate difference

@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.mume12.happy;
+package com.facebook.android;
 
 public final class R {
     public static final class attr {
