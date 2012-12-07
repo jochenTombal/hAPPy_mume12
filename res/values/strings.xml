@@ -144,6 +144,11 @@
    <!-- Facebook  -->
    <string name="app_name">Facebook</string>
    <string name="title_activity_facebook">FacebookActivity</string>
-   
-   
+   <string name="title_activity_facebook_connector">FacebookConnector</string>
+      <string name="title_facebook.SessionEvents">SessionEvents</string>
+      <string name="title_BaseRequestListener">BaseRequestListener</string>
+      <string name="title_BaseDialogListener">BaseDialogListener</string>
+      <string name="title_SessionStore">SessionStore</string>
+         
+
 </resources>

@@ -50,30 +50,7 @@ public class CalendarActivity extends Activity  implements CalendarView.OnCellTo
 			int month = mView.getMonth();
 			int day   = cell.getDayOfMonth();
 			
-			// FIX issue 6: make some correction on month and year
-			if(cell instanceof CalendarView.GrayCell) {
-				// oops, not pick current month...				
-				if (day < 15) {
-					// pick one beginning day? then a next month day
-					if(month==11)
-					{
-						month = 0;
-						year++;
-					} else {
-						month++;
-					}
-					
-				} else {
-					// otherwise, previous month
-					if(month==0) {
-						month = 11;
-						year--;
-					} else {
-						month--;
-					}
-				}
-			}
-			//TODO data uithalen en weergeven
+	//TODO data uithalen en weergeven
 			
 			final Calendar dat = Calendar.getInstance();
 	        dat.set(Calendar.YEAR, year);
@@ -136,6 +113,33 @@ public class CalendarActivity extends Activity  implements CalendarView.OnCellTo
 				builder.setMessage(message).setNegativeButton("Close", null).show();
 				
 			}
+			
+			//TODO
+			
+			// FIX issue 6: make some correction on month and year
+			if(cell instanceof CalendarView.GrayCell) {
+				// oops, not pick current month...				
+				if (day < 15) {
+					// pick one beginning day? then a next month day
+					if(month==11)
+					{
+						month = 0;
+						year++;
+					} else {
+						month++;
+					}
+					
+				} else {
+					// otherwise, previous month
+					if(month==0) {
+						month = 11;
+						year--;
+					} else {
+						month--;
+					}
+				}
+			}
+		
 
 			
 			Intent ret = new Intent();

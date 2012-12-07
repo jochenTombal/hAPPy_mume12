@@ -50,9 +50,9 @@ public class FacebookActivity extends Activity {
         
         tweet.setOnClickListener(new View.OnClickListener() {
         	/**
-        	 * Send a tweet. If the user hasn't authenticated to Tweeter yet, he'll be redirected via a browser
-        	 * to the twitter login page. Once the user authenticated, he'll authorize the Android application to send
-        	 * tweets on the users behalf.
+        	 * Send a tweet. If the user hasn't authenticated to facebook yet, he'll be redirected via a browser
+        	 * to the facebook login page. Once the user authenticated, he'll authorize the Android application to send
+        	 * status on the users behalf.
         	 */
             public void onClick(View v) {
         		postMessage();

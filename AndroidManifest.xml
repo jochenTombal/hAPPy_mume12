@@ -208,35 +208,29 @@
                 android:value="com.mume12.happy.HomeScreenActivity" />
         </activity>
         
+       
         <activity
-            android:name=".general.TwitterActivity"
-            android:label="@string/title_activity_twitter" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mume12.happy.HomeScreenActivity" />
-        </activity>
-        <activity
-            android:name=".twitter.PrepareRequestTokenActivity"
-            android:label="@string/title_activity_prepare_request_token"
+            android:name=".facebook.FacebookConnector"
+            android:label="@string/title_activity_facebook_connector"
             android:launchMode="singleTask" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:host="callback"
-                    android:scheme="x-oauthflow-twitter" />
+                
             </intent-filter>
         </activity>
-        <activity
-            android:name=".twitter.ShowAuthPageTwitterActivity"
-            android:label="@string/title_activity_show_auth_page_twitter" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mume12.happy.WakingUpTabsActivity" />
-        </activity>
+        
+        <activity android:name=".facebook.SessionEvents"
+            android:label="@string/title_facebook.SessionEvents"></activity>
+        <activity android:name=".facebook.SessionStore"
+            android:label="@string/title_SessionStore"></activity>
+        <activity android:name=".facebook.BaseRequestListener"
+            android:label="@string/title_BaseRequestListener"></activity>
+        <activity android:name=".facebook.BaseDialogListener"
+            android:label="@string/title_BaseDialogListener"></activity>
+      
 		
     </application>
 

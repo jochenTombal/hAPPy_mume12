@@ -233,11 +233,15 @@ public final class R {
         /**  ReminderSettingsActivity screen 
          */
         public static final int textview_reminder=0x7f06002c;
+        public static final int title_BaseDialogListener=0x7f06006d;
+        public static final int title_BaseRequestListener=0x7f06006c;
+        public static final int title_SessionStore=0x7f06006e;
         public static final int title_activity_accelero_settings=0x7f06003a;
         public static final int title_activity_adjust_settings=0x7f060039;
         public static final int title_activity_ask_wake_up=0x7f06001b;
         public static final int title_activity_average_sleep_view=0x7f060040;
         public static final int title_activity_facebook=0x7f060069;
+        public static final int title_activity_facebook_connector=0x7f06006a;
         public static final int title_activity_going_to_sleep=0x7f060008;
         public static final int title_activity_going_to_sleep_fragment=0x7f06005b;
         public static final int title_activity_home_screen=0x7f060001;
@@ -259,6 +263,7 @@ public final class R {
         /**   
          */
         public static final int title_activity_waking_up_tabs=0x7f060051;
+        public static final int title_facebook_SessionEvents=0x7f06006b;
         public static final int twitter_clearcred=0x7f060056;
         public static final int twitter_tags=0x7f060053;
         public static final int twitter_title=0x7f060055;
