@@ -5,11 +5,16 @@
     android:background="@color/backgroundcolor" >
     
     <ListView
-        android:id="@+android:id/list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true" >
-    </ListView>
+    android:id="@+android:id/list"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    />
+	<TextView
+    android:id="@+id/android:empty"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:text="@string/main_no_items"/>
+        
+   
 
 </RelativeLayout>

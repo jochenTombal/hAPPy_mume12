@@ -58,6 +58,18 @@
             android:background="@drawable/twitter"
             android:onClick="startTwitter"
             android:textColor="@color/text_color" />
+
+        <Button
+            android:id="@+id/homescreen_facebook"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/homescreen_results"
+            android:layout_marginRight="19dp"
+            android:background="@drawable/facebook"
+            android:onClick="startFacebook"
+            android:textColor="@color/text_color" />
+
     </RelativeLayout>
 
 </ScrollView>

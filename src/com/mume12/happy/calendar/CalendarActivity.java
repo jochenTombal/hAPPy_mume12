@@ -1,22 +1,6 @@
-/*
- * Copyright (C) 2011 Chris Gao <chris@exina.net>
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+
 
 package com.mume12.happy.calendar;
-
-import com.mume12.happy.R;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -27,8 +11,11 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.mume12.happy.R;
+import com.mume12.happy.results.ShowDayResultActivity;
+
 public class CalendarActivity extends Activity  implements CalendarView.OnCellTouchListener{
-	public static final String MIME_TYPE = "vnd.android.cursor.dir/vnd.exina.android.calendar.date";
+	public static final String MIME_TYPE = "vnd.android.cursor.dir/vnd.com.mume12.happy.calendar.date";
 	CalendarView mView = null;
 	TextView mHit;
 	Handler mHandler = new Handler();
@@ -38,7 +25,7 @@ public class CalendarActivity extends Activity  implements CalendarView.OnCellTo
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.calendar);
+        setContentView(R.layout.activity_calendar);
         mView = (CalendarView)findViewById(R.id.calendar);
         mView.setOnCellTouchListener(this);
         
@@ -53,6 +40,8 @@ public class CalendarActivity extends Activity  implements CalendarView.OnCellTo
 			int year  = mView.getYear();
 			int month = mView.getMonth();
 			int day   = cell.getDayOfMonth();
+			
+
 			
 			// FIX issue 6: make some correction on month and year
 			if(cell instanceof CalendarView.GrayCell) {
@@ -77,14 +66,15 @@ public class CalendarActivity extends Activity  implements CalendarView.OnCellTo
 					}
 				}
 			}
+		
+
 			
-			Intent ret = new Intent();
+			Intent ret = new Intent(this, ShowDayResultActivity.class);
 			ret.putExtra("year", year);
 			ret.putExtra("month", month);
 			ret.putExtra("day", day);
-			this.setResult(RESULT_OK, ret);
-			finish();
-			return;
+			
+			startActivity(ret);
 		}
 		int day = cell.getDayOfMonth();
 		if(mView.firstDay(day))
@@ -99,7 +89,29 @@ public class CalendarActivity extends Activity  implements CalendarView.OnCellTo
 				Toast.makeText(CalendarActivity.this, DateUtils.getMonthString(mView.getMonth(), DateUtils.LENGTH_LONG) + " "+mView.getYear(), Toast.LENGTH_SHORT).show();
 			}
 		});
-	}
+		
+		
+		
+		}
+		
+		
+		//final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		//builder.setMessage(pen).setNegativeButton("Close", null).show();
+		
+//		final AlertDialog.Builder builder = new AlertDialog.Builder(
+//				v.getContext());
+//		builder.setMessage(pen).setNegativeButton("Close", null).show();
+		
+	//}
+	
+//	public boolean onTouchEvent (MotionEvent event){
+//		Toast toast = Toast.makeText(CalendarActivity.this, "pick a date", Toast.LENGTH_SHORT);
+//		toast.setDuration(3);
+//		toast.show();
+//		return true;
+//	}
+	
+	
 
     
 }

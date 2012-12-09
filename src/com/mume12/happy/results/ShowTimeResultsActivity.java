@@ -1,6 +1,7 @@
 package com.mume12.happy.results;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -12,6 +13,7 @@ import com.mume12.happy.storage.TimeStorageHandler;
 import android.os.Bundle;
 import android.app.AlertDialog;
 import android.app.ListActivity;
+import android.content.Intent;
 import android.view.View;
 import android.view.Window;
 import android.widget.ArrayAdapter;
@@ -20,18 +22,21 @@ import android.widget.ListView;
 public class ShowTimeResultsActivity extends ListActivity {
 
 	private ArrayAdapter<String> adapter;
-
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_listview);
-
-		showListItems();
+		Intent intent = getIntent();
+		
+		showAllListItems();
 	}
 
+	
+
 	// Show date and time
-	public void showListItems() {
+	public void showAllListItems() {
 		List<String> listItems = new ArrayList<String>();
 
 		TimeStorageHandler tsHandler = TimeStorageHandler.getInstance(this);

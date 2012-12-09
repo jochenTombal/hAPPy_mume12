@@ -91,9 +91,18 @@
         <activity
             android:name=".results.ShowTimeResultsActivity"
             android:label="@string/title_activity_show_time_results" >
+       
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mume12.happy.SelectResultsActivity" />
+        </activity>
+        <activity
+            android:name=".results.ShowDayResultActivity"
+            android:label="@string/title_activity_show_day_result" >
+       
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mume12.happy.calendar.CalendarActivity" />
         </activity>
         <activity
             android:name=".results.ShowEmotionResultsActivity"
@@ -188,12 +197,12 @@
 		    <intent-filter>
 		        <action android:name="android.intent.action.PICK" />
 		        <category android:name="android.intent.category.DEFAULT" />
-		        <data android:mimeType="vnd.android.cursor.dir/vnd.exina.android.calendar.date" />
+		        <data android:mimeType="vnd.android.cursor.dir/vnd.com.mume12.happy.calendar.date" />
 		    </intent-filter>
 		    <intent-filter>
 		        <action android:name="android.intent.action.VIEW" />
 		        <category android:name="android.intent.category.DEFAULT" />
-		        <data android:mimeType="vnd.android.cursor.dir/vnd.exina.android.calendar.date" />
+		        <data android:mimeType="vnd.android.cursor.dir/vnd.com.mume12.happy.calendar.date" />
 		    </intent-filter>
 		    <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

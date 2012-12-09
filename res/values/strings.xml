@@ -92,6 +92,7 @@
     <string name="title_activity_pie_chart_demo01">PieChartDemo01Activity</string>
     <string name="title_activity_average_sleep_view">AverageSleepViewActivity</string>
     <string name="title_activity_show_time_results">ShowTimeResultsActivity</string>
+    <string name="title_activity_show_day_result">ShowDayResultActivity</string>
 
     <!-- different result strings -->
     <string name="show_time_results">Time Statistics</string>
@@ -139,6 +140,8 @@
  	<string name="show">Show Calendar</string>
   	<string name="calendar_name">Calendar</string>
    	<string name="hint">Hint: touch the first or last day of month to move to previous or next month.</string>
+   	 <string name="main_no_items">No data to display</string>
+   	
    
    
    <!-- Facebook  -->
