@@ -254,32 +254,5 @@ public class CalendarView extends ImageView {
 		}			
 		
 	}
-	
-	
-	public void onActivityResult(int requestCode, int resultCode, Intent data) {
-	    
-	        int year = data.getIntExtra("year", 0);   // get number of year
-	        int month = data.getIntExtra("month", 0); // get number of month 0..11
-	        int day = data.getIntExtra("day", 0);     // get number of day 0..31
-
-	        // format date and display on screen
-	        final Calendar dat = Calendar.getInstance();
-	        dat.set(Calendar.YEAR, year);
-	        dat.set(Calendar.MONTH, month);
-	        dat.set(Calendar.DAY_OF_MONTH, day);
-	        
-	        // show result
-	        SimpleDateFormat format = new SimpleDateFormat("yyyy MMM dd");
-	        
-	        
-	        
-	        
-	        format.format(dat.getTime());
-	        Toast.makeText(getContext(), text, Toast.LENGTH_LONG).show();
-	        Toast.makeText(, format.format(dat.getTime()), Toast.LENGTH_LONG).show();
-	        
-	        
-	              
-	}
 
 }
