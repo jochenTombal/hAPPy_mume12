@@ -3,8 +3,8 @@ package com.mume12.happy.storage;
 import android.content.Context;
 
 public class SleepEmotionStorage extends EmotionStorage {
-	private int mood_sleep, soc_contact_quality, soc_contact_quantity,  stressWork ,stressNonWork;
-	private double rec_hours;
+	private int mood_sleep, soc_contact_quality, soc_contact_quantity,  stressWork ,stressNonWork,
+			rec_hours;
 	private int id;
 
 	private int rec_enough, alcohol, caffeine;
@@ -42,7 +42,7 @@ public class SleepEmotionStorage extends EmotionStorage {
 
 	public SleepEmotionStorage(int _id, int _mood_sleep,
 			int _soc_contact_quality, int soc_contact_quantity, int _stressWork, int _stressNonWork,
-			double _rec_hours, boolean _rec_enough, boolean _alcohol, boolean _caffeine) {
+			int _rec_hours, boolean _rec_enough, boolean _alcohol, boolean _caffeine) {
 		this.id = _id;
 		this.mood_sleep = _mood_sleep;
 		this.soc_contact_quality = _soc_contact_quality;
@@ -98,7 +98,7 @@ public class SleepEmotionStorage extends EmotionStorage {
 		return stressNonWork;
 	}
 
-	public double get_rec_hours() {
+	public int get_rec_hours() {
 		return rec_hours;
 	}
 
@@ -131,7 +131,7 @@ public class SleepEmotionStorage extends EmotionStorage {
 		this.stressNonWork = stress;
 	}
 
-	public void set_rec_hours(double rec_hours) {
+	public void set_rec_hours(int rec_hours) {
 		this.rec_hours = rec_hours;
 	}
 

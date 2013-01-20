@@ -181,12 +181,12 @@ public class MoodVariationsActivity extends Activity {
 
 		int count = 0;
 
-//		 long one_day = 24 * 60 * 60 * 1000; // For testing
+		// long one_day = 24 * 60 * 60 * 1000; // For testing
 
 		for (TimeStorage timeSt : timeStorageList) {
 			long date = timeSt.getStartDate();
 
-//			 date += (one_day * count); // For testing
+			// date += (one_day * count); // For testing
 
 			String date_string = new SimpleDateFormat("yyyy-MM-dd")
 					.format(date);

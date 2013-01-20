@@ -1,6 +1,5 @@
 package com.mume12.happy.general;
 
-import com.facebook.android.Facebook;
 import com.mume12.happy.R;
 import com.mume12.happy.handlers.FlowParametersHandler;
 import com.mume12.happy.settings.SettingsActivity;
@@ -95,17 +94,12 @@ public class HomeScreenActivity extends Activity {
 	}
 
 	public void startSettingsActivity() {
-		Intent intent = new Intent(this, FacebookActivity.class);
+		Intent intent = new Intent(this, SettingsActivity.class);
 		startActivity(intent);
 	}
 	
 	public void startTwitter(View v){
 		Intent intent = new Intent(this, TwitterActivity.class);
-		startActivity(intent);
-	}
-	
-	public void startFacebook(View v){
-		Intent intent = new Intent(this, FacebookActivity.class);
 		startActivity(intent);
 	}
 
@@ -139,6 +133,5 @@ public class HomeScreenActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-	
 	
 }

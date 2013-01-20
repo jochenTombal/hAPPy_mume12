@@ -92,7 +92,6 @@
     <string name="title_activity_pie_chart_demo01">PieChartDemo01Activity</string>
     <string name="title_activity_average_sleep_view">AverageSleepViewActivity</string>
     <string name="title_activity_show_time_results">ShowTimeResultsActivity</string>
-    <string name="title_activity_show_day_result">ShowDayResultActivity</string>
 
     <!-- different result strings -->
     <string name="show_time_results">Time Statistics</string>
@@ -130,28 +129,5 @@
     <string name="title_activity_waking_up_fragment">WakingUpFragmentActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_mood_variations">MoodVariationsActivity</string>
-
-    <!--Calendar -->
-    <string name="about_summary">Calendar</string>
-    <string name="about">About</string> 
-    <string name="pick_summary">start with ACTION_PICK</string>
-	<string name="pick">Pick up a Date</string> 
-	<string name="show_summary">start with ACTION_VIEW</string>
- 	<string name="show">Show Calendar</string>
-  	<string name="calendar_name">Calendar</string>
-   	<string name="hint">Hint: touch the first or last day of month to move to previous or next month.</string>
-   	 <string name="main_no_items">No data to display</string>
-   	
-   
-   
-   <!-- Facebook  -->
-   <string name="app_name">Facebook</string>
-   <string name="title_activity_facebook">FacebookActivity</string>
-   <string name="title_activity_facebook_connector">FacebookConnector</string>
-      <string name="title_facebook.SessionEvents">SessionEvents</string>
-      <string name="title_BaseRequestListener">BaseRequestListener</string>
-      <string name="title_BaseDialogListener">BaseDialogListener</string>
-      <string name="title_SessionStore">SessionStore</string>
-         
 
 </resources>

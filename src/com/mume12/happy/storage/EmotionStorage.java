@@ -3,8 +3,7 @@ package com.mume12.happy.storage;
 public class EmotionStorage {
 
 	private int sleep_quality, wake_up_mood, mood_sleep, soc_contact_quality,
-			soc_contact_quantity, stressWork,stressNonWork;
-	double rec_hours;
+			soc_contact_quantity, stressWork,stressNonWork, rec_hours;
 	private int id;
 
 	private int enough_sleep, rec_enough, alcohol, caffeine;
@@ -13,7 +12,7 @@ public class EmotionStorage {
 	
 	public EmotionStorage(int _mood_sleep,
 			int _soc_contact_quality, int soc_contact_quantity, int _stressWork, int _stressNonWork,
-			double _rec_hours, boolean _rec_enough, int _wake_up_mood, int _sleep_quality, boolean _enough_sleep, boolean _alcohol, boolean _caffeine) {
+			int _rec_hours, boolean _rec_enough, int _wake_up_mood, int _sleep_quality, boolean _enough_sleep, boolean _alcohol, boolean _caffeine) {
 		this.mood_sleep = _mood_sleep;
 		this.soc_contact_quality = _soc_contact_quality;
 		this.soc_contact_quantity = soc_contact_quantity;
@@ -52,7 +51,7 @@ public class EmotionStorage {
 
 	public EmotionStorage(int _id, int _mood_sleep,
 			int _soc_contact_quality, int soc_contact_quantity, int _stressWork, int _stressNonWork,
-			double _rec_hours, boolean _rec_enough, int _wake_up_mood, int _sleep_quality, boolean _enough_sleep,  boolean _alcohol, boolean _caffeine) {
+			int _rec_hours, boolean _rec_enough, int _wake_up_mood, int _sleep_quality, boolean _enough_sleep,  boolean _alcohol, boolean _caffeine) {
 		this.id = _id;
 		this.mood_sleep = _mood_sleep;
 		this.soc_contact_quality = _soc_contact_quality;
@@ -111,7 +110,7 @@ public class EmotionStorage {
 		return stressNonWork;
 	}
 	
-	public double get_rec_hours() {
+	public int get_rec_hours() {
 		return rec_hours;
 	}
 	
@@ -157,7 +156,7 @@ public class EmotionStorage {
 		this.stressNonWork = stress;
 	}
 
-	public void set_rec_hours(double rec_hours) {
+	public void set_rec_hours(int rec_hours) {
 		this.rec_hours = rec_hours;
 	}	
 

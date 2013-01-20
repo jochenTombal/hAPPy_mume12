@@ -3,22 +3,20 @@ package com.mume12.happy.general;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.app.ListActivity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.view.Window;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-
 import com.mume12.happy.R;
-import com.mume12.happy.calendar.CalendarActivity;
 import com.mume12.happy.charts.MoodPieGTS;
 import com.mume12.happy.charts.MoodPieWU;
 import com.mume12.happy.charts.MoodVariationsActivity;
 import com.mume12.happy.results.ShowEmotionResultsActivity;
 import com.mume12.happy.results.ShowTimeResultsActivity;
+import android.os.Bundle;
+import android.app.ListActivity;
+import android.content.Intent;
+import android.util.Log;
+import android.view.View;
+import android.view.Window;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 public class SelectResultsActivity extends ListActivity {
 
@@ -39,7 +37,6 @@ public class SelectResultsActivity extends ListActivity {
 		items.add("Going to sleep MoodPie");
 		items.add("Waking up MoodPie");
 		items.add("Mood variations");
-		items.add(getString(R.string.calendar_name));
 
 		// Show different result options
 		showListItems();
@@ -77,12 +74,8 @@ public class SelectResultsActivity extends ListActivity {
 			Intent barChartIntent = new Intent(this,
 					MoodVariationsActivity.class);
 			startActivity(barChartIntent);
-		}else if (pen.equals(items.get(5))){
-			startActivity(new Intent(Intent.ACTION_PICK).setDataAndType(null, CalendarActivity.MIME_TYPE));
 		} else {
 			Log.i("WRONG_LISTITEM", "unknown listitem clicked");
 		}
 	}
-	
-
 }

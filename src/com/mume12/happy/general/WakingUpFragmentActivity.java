@@ -72,5 +72,4 @@ public class WakingUpFragmentActivity extends FragmentActivity {
 
 		wakeUpEmotionStorage.storeDB(this);
 	}
-	
 }

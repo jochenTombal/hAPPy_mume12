@@ -91,18 +91,9 @@
         <activity
             android:name=".results.ShowTimeResultsActivity"
             android:label="@string/title_activity_show_time_results" >
-       
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mume12.happy.SelectResultsActivity" />
-        </activity>
-        <activity
-            android:name=".results.ShowDayResultActivity"
-            android:label="@string/title_activity_show_day_result" >
-       
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mume12.happy.calendar.CalendarActivity" />
         </activity>
         <activity
             android:name=".results.ShowEmotionResultsActivity"
@@ -193,54 +184,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mume12.happy.general.SelectResultsActivity" />
         </activity>
-        <activity android:name="com.mume12.happy.calendar.CalendarActivity">
-		    <intent-filter>
-		        <action android:name="android.intent.action.PICK" />
-		        <category android:name="android.intent.category.DEFAULT" />
-		        <data android:mimeType="vnd.android.cursor.dir/vnd.com.mume12.happy.calendar.date" />
-		    </intent-filter>
-		    <intent-filter>
-		        <action android:name="android.intent.action.VIEW" />
-		        <category android:name="android.intent.category.DEFAULT" />
-		        <data android:mimeType="vnd.android.cursor.dir/vnd.com.mume12.happy.calendar.date" />
-		    </intent-filter>
-		    <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mume12.happy.general.SelectResultsActivity" />
-		</activity>
-		
-        <activity
-            android:name=".general.FacebookActivity"
-            android:label="@string/title_activity_facebook" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mume12.happy.HomeScreenActivity" />
-        </activity>
-        
-       
-        <activity
-            android:name=".facebook.FacebookConnector"
-            android:label="@string/title_activity_facebook_connector"
-            android:launchMode="singleTask" >
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                
-            </intent-filter>
-        </activity>
-        
-        <activity android:name=".facebook.SessionEvents"
-            android:label="@string/title_facebook.SessionEvents"></activity>
-        <activity android:name=".facebook.SessionStore"
-            android:label="@string/title_SessionStore"></activity>
-        <activity android:name=".facebook.BaseRequestListener"
-            android:label="@string/title_BaseRequestListener"></activity>
-        <activity android:name=".facebook.BaseDialogListener"
-            android:label="@string/title_BaseDialogListener"></activity>
-      
-		
     </application>
 
 </manifest>

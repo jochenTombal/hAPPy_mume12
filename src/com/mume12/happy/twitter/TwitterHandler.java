@@ -1,4 +1,4 @@
-package com.mume12.happy.twitter;
+package src.com.mume12.happy.twitter;
 
 import oauth.signpost.OAuth;
 import twitter4j.Twitter;
